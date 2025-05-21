@@ -1,4 +1,4 @@
-package com.example.info438tp2ex2;
+package com.example.fragmenttofragment;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -14,13 +14,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Fragment1 fragment1 = new Fragment1();
-
-        Fragment2 fragment2 = new Fragment2();
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.f1, fragment1);
-        ft.replace(R.id.f2, fragment2);
+        ft.replace(R.id.fragment_container, fragment1);
         ft.commit();
-
     }
 }

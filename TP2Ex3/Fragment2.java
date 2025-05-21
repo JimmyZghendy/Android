@@ -1,4 +1,4 @@
-package com.example.info438tp2ex2;
+package com.example.fragmenttofragment;
 
 import android.os.Bundle;
 
@@ -9,25 +9,33 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
 
 public class Fragment2 extends Fragment {
+    private TextView textFirstName, textLastName;
+    private String firstName, lastName;
 
-    private TextView nameTv, profileTv;
+
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        firstName = getArguments().getString("firstName", "");
+        lastName = getArguments().getString("lastName", "");
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_2, container, false);
-        nameTv = view.findViewById(R.id.tv1);
-        profileTv = view.findViewById(R.id.tv2);
+        View view = inflater.inflate(R.layout.fragment_2, container, false);
+        textFirstName = view.findViewById(R.id.fnameTv);
+        textLastName = view.findViewById(R.id.lnameTv);
+
+        //Set the received data
+        textFirstName.setText("First Name: " + firstName);
+        textLastName.setText("Last Name: " + lastName);
+
         return view;
-    }
-    public void change (String name, String profile){
-        if(nameTv != null && profileTv != null){
-            nameTv.setText("Name: " + name);
-            profileTv.setText("Profile: " + profile);
-        }
     }
 }
