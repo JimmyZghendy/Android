@@ -1,0 +1,87 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:shrinkColumns="1,2">
+
+    <!-- Header row -->
+    <TableRow>
+        <TextView
+            android:text="Player Name"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Set 1"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Set 2"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+    <!-- Player 1 row -->
+    <TableRow>
+        <EditText
+            android:id="@+id/etP1Name"
+            android:hint="Player 1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/p1Set1"
+            android:inputType="number"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/p1Set2"
+            android:inputType="number"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+    <!-- Player 2 row -->
+    <TableRow>
+        <EditText
+            android:id="@+id/etP2Name"
+            android:hint="Player 2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/p2Set1"
+            android:inputType="number"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/p2Set2"
+            android:inputType="number"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+    <!-- Red line divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#FF0000"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Button row -->
+    <TableRow>
+        <Button
+            android:id="@+id/btnResult"
+            android:text="RESULT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+</TableLayout>
