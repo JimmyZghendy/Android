@@ -26,6 +26,6 @@ public class Fragment3 extends Fragment {
             tvFinal.setText(winner + " plays the final game on " + date);
         }
 
-        return view;
+        return view; 
     }
 }
